@@ -1,3 +1,51 @@
+## 作业说明
+
+Tasking管道图见task.pdf
+
+Tasking任务：
+
+AllItems: loadAllItems();
+AllPromotions: loadAllPromotions();
+#1 generateItemsBuy
+    输入：selectedItems: [string], AllItems;
+    输出：ItemsNum: [string];
+#2 generateHeadString
+    输入：
+    输出：HeadString: string;
+#3 generateItemsBuyString
+    输入：ItemsNum, AllItems;
+    输出：AllItemsBuyString: string;
+#4 calculateNoDiscount
+    输入：ItemsNum, AllItems;
+    输出：CostWithoutDiscount: number;
+#5 calculateDiscountWay1
+    输入：AllPromotions, CostWithoutDiscount;
+    输出：CostWithDiscountWay1: number;
+#6 generateDiscountItems
+    输入：AllItems, AllPromotions;
+    输出：DiscountItems: [number];
+#7 calculateDiscountWay2
+    输入：ItemsNum, AllItems, AllPromotions;
+    输出：CostWithDiscountWay2: number;
+#8 generateDiscount1String
+    输入：CostWithoutDiscount, CostWithDiscountWay1, AllPromotions;
+    输出：Discount1String: string;
+#9 generateDiscount2String
+    输入：CostWithoutDiscount, CostWithDiscountWay2, AllPromotions, AllItems, DiscountItems;
+    输出：Discount2String: string;
+#10 generateTailString
+    输入：cost: number (CostWithoutDiscount, CostWithDiscountWay1 or CostWithDiscountWay2);
+    输出：TailString: string;
+#11 chooseBestDiscount
+    输入：ItemsNum, AllItems, AllPromotions;
+    输出：BestDiscountString: string;
+#12 bestCharge
+    输入：selectedItems;
+    输出：resultString: string;
+
+
+
+***
 
 ## 需求描述
 
