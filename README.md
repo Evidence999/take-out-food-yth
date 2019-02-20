@@ -8,67 +8,67 @@ AllItems: loadAllItems();
 
 AllPromotions: loadAllPromotions();
 
-#1 generateItemsBuy
+#1 generateItemsBuy：生成数组ItemsNum，用于记录所点Item的数目
 
     输入：selectedItems: [string], AllItems;
     
     输出：ItemsNum: [string];
     
-#2 generateHeadString
+#2 generateHeadString：生成菜单Head部分
 
     输入：
     
     输出：HeadString: string;
     
-#3 generateItemsBuyString
+#3 generateItemsBuyString：生成所购的所有Item和价格清单String
 
     输入：ItemsNum, AllItems;
     
     输出：AllItemsBuyString: string;
     
-#4 calculateNoDiscount
+#4 calculateNoDiscount：计算没有任何优惠时的Cost
 
     输入：ItemsNum, AllItems;
     
     输出：CostWithoutDiscount: number;
     
-#5 calculateDiscountWay1
+#5 calculateDiscountWay1：计算第一种优惠方式的价格，即‘满30减6元’
 
     输入：AllPromotions, CostWithoutDiscount;
     
     输出：CostWithDiscountWay1: number;
     
-#6 generateDiscountItems
+#6 generateDiscountItems：生成数组DiscountItems，用于记录第二种优惠方式打折的Item
 
     输入：AllItems, AllPromotions;
     
     输出：DiscountItems: [number];
     
-#7 calculateDiscountWay2
+#7 calculateDiscountWay2：计算第二种优惠方式的价格，即‘指定菜品半价’
 
     输入：ItemsNum, AllItems, AllPromotions;
     
     输出：CostWithDiscountWay2: number;
     
-#8 generateDiscount1String
+#8 generateDiscount1String：生成使用第一种优惠方式的String
 
     输入：CostWithoutDiscount, CostWithDiscountWay1, AllPromotions;
     
     输出：Discount1String: string;
     
-#9 generateDiscount2String
+#9 generateDiscount2String：生成使用第二种优惠方式的String
 
     输入：CostWithoutDiscount, CostWithDiscountWay2, AllPromotions, AllItems, DiscountItems;
     
     输出：Discount2String: string;
     
-#10 generateTailString
+#10 generateTailString：生成菜单Tail部分String
 
     输入：cost: number (CostWithoutDiscount, CostWithDiscountWay1 or CostWithDiscountWay2);
     
     输出：TailString: string;
     
-#11 chooseBestDiscount
+#11 chooseBestDiscount：自动选择最优惠的方式并计算出最终金额，生成最优惠方式的String
 
     输入：ItemsNum, AllItems, AllPromotions;
     
