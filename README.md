@@ -14,7 +14,7 @@ AllPromotions: loadAllPromotions();
     
     输出：ItemsNum: [string];
     
-#2 generateHeadString：生成菜单Head部分
+#2 generateHeadString：生成菜单Head部分String
 
     输入：
     
